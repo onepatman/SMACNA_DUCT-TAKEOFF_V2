@@ -1,5 +1,14 @@
 # SMACNA Rectangular Duct Material Takeoff — PWA
 
+**Live app:** https://onepatman.github.io/SMACNA_DUCT-TAKEOFF_V2/ (deploys automatically from `main` via `.github/workflows/deploy-pages.yml`; first deploy requires GitHub Pages set to "GitHub Actions" as the source under repo Settings → Pages).
+
+This repo contains source only — there is no build committed. Opening
+`index.html` directly (double-clicking the file, `file://…`) will always show
+a blank page: the browser blocks the unbuilt `/src/main.tsx` module under the
+`file://` origin, and the reference is to raw TypeScript/JSX the browser
+can't execute anyway. Use the live URL above, or build it yourself — see
+[Local development](#local-development).
+
 ## Source file analysis
 
 `ME_DUCT_SMACNA.xls` (sheet `Duct_SMACNA`) contained no calculation logic —
